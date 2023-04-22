@@ -1,0 +1,26 @@
+.nav {
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.logo {
+  margin-left: 5%;
+}
+
+.nav > div {
+  margin-right: 5%;
+  font-size: 1.1rem;
+  font-weight: 700;
+  width: 12.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav > div > img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
