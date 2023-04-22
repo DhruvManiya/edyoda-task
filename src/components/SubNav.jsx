@@ -5,7 +5,7 @@ const SubNav = () => {
     <nav className={`${classes.nav}`}>
         <img src="/logo.PNG" alt="" className={`${classes.logo}`} />
         <div>
-            <p>Hi Test Learner</p>
+            <p>Hi Test Learner!</p>
             <img src="/p7.jpg" alt="" />
         </div>
     </nav>

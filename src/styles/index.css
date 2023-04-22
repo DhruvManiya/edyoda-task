@@ -2,6 +2,7 @@
 
 :root {
   --secondary-color: #15294b;
+  --active-background-color: #e0e6f2;
   --secondary-font-color: #fff;
 }
 
@@ -13,4 +14,8 @@ body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
 }

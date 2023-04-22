@@ -7,11 +7,13 @@ import Instructors from "./pages/Instructors";
 import Loop from "./pages/Loop";
 import Quiz from "./pages/Quiz";
 import Assignment from "./pages/Assignment";
+import Sidebar from "./components/Sidebar";
 
 const App = () => {
   return (
     <>
       <Navbar />
+      <Sidebar />
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home />} />

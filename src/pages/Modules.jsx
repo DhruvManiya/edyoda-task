@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Modules = () => {
-  return (
-    <div>Modules</div>
-  )
-}
+  return <></>;
+};
 
-export default Modules
+export default Modules;
