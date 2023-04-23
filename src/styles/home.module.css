@@ -1,0 +1,198 @@
+.home_main {
+  margin: 10rem 5rem 5rem 13rem;
+}
+
+.certi_details_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.certi_container {
+  margin: 2.5rem 0;
+  width: 90%;
+}
+
+.certi_details_container > div > div {
+  margin: 1rem 0;
+}
+
+.certi_details_container > div > div > span {
+  margin: 0 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.exam_structure > div > span {
+  padding: 0.35rem 1rem;
+  border-radius: 1rem;
+  background-color: #dfe6f2;
+}
+
+.exam_button {
+  color: #37adff;
+  border: 1px solid #37adff;
+  border-radius: 1.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+}
+
+.complition_status {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background-color: #cceeff;
+  width: fit-content;
+}
+
+.certi_details_container > div > h3 {
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+
+.learning_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2.5rem 0;
+  gap: 2rem;
+}
+
+.learning_container > div:first-child {
+  width: 75%;
+}
+.learning_container > div:last-child {
+  width: 25%;
+}
+
+.grade {
+  margin: 1.25rem 1.25rem 2rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grade > span {
+  font-size: 1.2rem;
+}
+
+.progress {
+  margin-top: 1rem;
+}
+
+.modules {
+  display: flex;
+  flex-direction: column;
+}
+
+.modules > a {
+  margin: 0.75rem 0;
+  align-self: end;
+  color: #37adff;
+}
+
+.learning_program {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.learning_program > div > h3 {
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+
+.learning_header {
+  width: 75%;
+  border-right: 1px solid #37adff;
+}
+
+.learning_program_instuctor {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.learning_program_instuctor > span {
+  font-weight: 500;
+  color: #37adff;
+}
+
+.instructor {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+}
+
+.learning{
+    display: flex;
+}
+
+.learning_status_progress_bar{
+    width: 15rem;
+    height: 0.75rem;
+    border-radius: 0.75rem;
+    background-color: #bddaed;
+}
+
+.learning_status > div{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.learning_status > div > div > p{
+    color: #37adff;
+    margin: 0.25rem;
+}
+
+.learning_status {
+    margin: 1rem 0 1rem 5rem;
+}
+
+.currentday_plans{
+    margin: 1rem 2rem;
+}
+
+.currentday_plans > h3{
+    margin: 1rem 0;
+    color: #37adff;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.currentday_plans > div > h3{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.currentday_plans > div > span{
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #888;
+}
+.currentday_open_time {
+    display: flex;
+    justify-content: space-between;
+}
+
+.currentday_open_time > i {
+    color: #37adff;
+}
+
+.currentday_session_button{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.currentday_session_button > button{
+    cursor: pointer;
+    background-color: #dddddd;
+    outline: none;
+    border: 0;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+}

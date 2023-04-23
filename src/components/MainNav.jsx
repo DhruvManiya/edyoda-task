@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import classes from "../styles/mainav.module.css";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
@@ -13,7 +13,16 @@ const programs = [
 
 const MainNav = () => {
   const [dropDown, setDropDwon] = useState(false);
+  const [desc, setDesc] = useState("");
   const location = useLocation();
+
+  useEffect(() => {
+    setDesc(
+      programs.find((program) => {
+        return program.name === location.pathname.split("/")[2];
+      })
+    );
+  });
 
   return (
     <>
@@ -40,7 +49,7 @@ const MainNav = () => {
                     {dropDown ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
                   </span>
                 </div>
-                <span>Select your Program here</span>
+                <span>{desc.desc}</span>
               </div>
             </>
           )}
