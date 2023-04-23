@@ -5,15 +5,19 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 
 const programs = [
-  { link: "/home/ECRD", name: "ECRD", desc: "ECRD Program" },
-  { link: "/home/FSR222222", name: "FSR222222", desc: "FSR Program" },
-  { link: "/home/DS261121", name: "DS261121", desc: "DS Program" },
-  { link: "/home/DS031221", name: "DS031221", desc: "Data Scientist Program" },
+  { link: "/home/ECRD", name: "ECRD", description: "ECRD Program" },
+  { link: "/home/FSR222222", name: "FSR222222", description: "FSR Program" },
+  { link: "/home/DS261121", name: "DS261121", description: "DS Program" },
+  {
+    link: "/home/DS031221",
+    name: "DS031221",
+    description: "Data Scientist Program",
+  },
 ];
 
 const MainNav = () => {
   const [dropDown, setDropDwon] = useState(false);
-  const [desc, setDesc] = useState("");
+  const [desc, setDesc] = useState({ link: "", name: "", description: "" });
   const location = useLocation();
 
   useEffect(() => {
@@ -22,7 +26,7 @@ const MainNav = () => {
         return program.name === location.pathname.split("/")[2];
       })
     );
-  });
+  }, []);
 
   return (
     <>
@@ -49,7 +53,7 @@ const MainNav = () => {
                     {dropDown ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
                   </span>
                 </div>
-                <span>{desc.desc}</span>
+                <span>{desc.description}</span>
               </div>
             </>
           )}
