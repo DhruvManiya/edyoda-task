@@ -22,7 +22,7 @@ const Sidebar = () => {
             <span>HOME</span>
           </li>
         </Link>
-        <Link to={`/modules/${location.pathname.split("/")[2]}`}>
+        <Link to={`/modules/${location.pathname.split("/")[2]}/loop`}>
           <li
             className={`${classes.pages_button} ${
               location.pathname.split("/")[1] === "modules" &&
