@@ -4,29 +4,31 @@ import classes from "../styles/mainav.module.css";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 
-const programs = [
-  { link: "/home/ECRD", name: "ECRD", description: "ECRD Program" },
-  { link: "/home/FSR222222", name: "FSR222222", description: "FSR Program" },
-  { link: "/home/DS261121", name: "DS261121", description: "DS Program" },
-  {
-    link: "/home/DS031221",
-    name: "DS031221",
-    description: "Data Scientist Program",
-  },
-];
-
 const MainNav = () => {
   const [dropDown, setDropDwon] = useState(false);
-  const [desc, setDesc] = useState({ link: "", name: "", description: "" });
+  const [desc, setDesc] = useState("");
   const location = useLocation();
 
+  const description = () => {
+    if (location.pathname.split("/")[2] === "ECRD") {
+      setDesc("ECRD Program");
+    }
+    if (location.pathname.split("/")[2] === "FSR222222") {
+      setDesc("FSR Program");
+    }
+    if (location.pathname.split("/")[2] === "DS261121") {
+      setDesc("DS Program");
+    }
+    if (location.pathname.split("/")[2] === "DS031221") {
+      setDesc("Data Scientist Program");
+    }
+  };
+
   useEffect(() => {
-    setDesc(
-      programs.find((program) => {
-        return program.name === location.pathname.split("/")[2];
-      })
-    );
-  }, []);
+    description()
+  },[location])
+
+  console.log(desc)
 
   return (
     <>
@@ -52,8 +54,8 @@ const MainNav = () => {
                   <span>
                     {dropDown ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
                   </span>
+                  <span>{desc}</span>
                 </div>
-                <span>{desc.description}</span>
               </div>
             </>
           )}
@@ -62,20 +64,58 @@ const MainNav = () => {
           <section className={`${classes.drop_down_section}`}>
             <p>select program</p>
             <ul className={`${classes.programs}`}>
-              {programs &&
-                programs.map((program) => (
-                  <Link
-                    to={program.link}
-                    className={`${
-                      location.pathname.split("/")[2] === program.name
-                        ? classes.selected
-                        : classes.link
-                    }`}
-                    onClick={() => setDropDwon(!dropDown)}
-                  >
-                    <li>{program.name}</li>
-                  </Link>
-                ))}
+              <Link
+                to="/home/ECRD"
+                className={`${
+                  location.pathname.split("/")[2] === "ECRD"
+                    ? classes.selected
+                    : classes.link
+                }`}
+                onClick={() => {
+                  setDropDwon(!dropDown);
+                }}
+              >
+                <li>ECRD</li>
+              </Link>
+              <Link
+                to="/home/FSR222222"
+                className={`${
+                  location.pathname.split("/")[2] === "FSR222222"
+                    ? classes.selected
+                    : classes.link
+                }`}
+                onClick={() => {
+                  setDropDwon(!dropDown);
+                }}
+              >
+                <li>FSR222222</li>
+              </Link>
+              <Link
+                to="/home/DS261121"
+                className={`${
+                  location.pathname.split("/")[2] === "DS261121"
+                    ? classes.selected
+                    : classes.link
+                }`}
+                onClick={() => {
+                  setDropDwon(!dropDown);
+                }}
+              >
+                <li>DS261121</li>
+              </Link>
+              <Link
+                to="/home/DS031221"
+                className={`${
+                  location.pathname.split("/")[2] === "DS031221"
+                    ? classes.selected
+                    : classes.link
+                }`}
+                onClick={() => {
+                  setDropDwon(!dropDown);
+                }}
+              >
+                <li>DS031221</li>
+              </Link>
             </ul>
           </section>
         )}
